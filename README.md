@@ -1,26 +1,17 @@
-# ag_news_classification
+# News Article Classification
 
-# AG News Classification Pipeline
+This project performs **News Article Classification** using two approaches:
+1. **Naive Bayes with TF-IDF**
+2. **BERT (Transformer-based Model)**
 
-## Overview
-This project implements a text classification pipeline for AG News dataset using DistilBERT. The solution includes:
-- Data cleaning and preprocessing
-- Exploratory data analysis
-- Transformer-based classification
-- Model evaluation and persistence
+It includes **data preprocessing, visualization, training, and evaluation** for both models.
 
-## Pipeline Steps
-1. Data Acquisition & Cleaning
-2. Exploratory Data Analysis
-3. Model Training with DistilBERT
-4. Evaluation & Model Saving
+## Features
+- **Data Cleaning & Preprocessing** (Stopwords removal, tokenization, lemmatization)
+- **Data Visualization** (Word Cloud, Category Distribution)
+- **Naive Bayes Classifier** with **TF-IDF Feature Extraction**
+- **BERT-based Text Classification**
+- **Model Performance Evaluation** (Accuracy, Classification Report)
+- **Model Saving & Deployment Preparation**
 
-## Requirements
-- Python 3.8+
-- GPU recommended for training
 
-## Installation
-```bash
-git clone https://github.com/yourusername/ag_news_classification.git
-cd ag_news_classification
-pip install -r requirements.txt
