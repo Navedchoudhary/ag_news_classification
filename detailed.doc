@@ -1,0 +1,32 @@
+News Article Classification - Code Explanation
+This document provides an explanation of the code for News Article Classification. It covers data loading, preprocessing, model training, and evaluation. Additionally, it highlights the time-consuming steps and instructs to ignore warnings.
+1. Libraries Used
+The following libraries are used for different tasks:
+- pandas, numpy: Data manipulation
+- nltk: Text preprocessing
+- sklearn: Machine Learning model (Naive Bayes) and TF-IDF feature extraction
+- transformers: BERT-based text classification
+- matplotlib, seaborn, wordcloud: Data visualization
+- torch: Deep learning model training
+2. Dataset Loading (Time-Consuming)
+The dataset is fetched using `fetch_20newsgroups`, which downloads the full dataset the first time it's executed. This may take a few minutes depending on the internet speed. Please be patient during this step.
+
+**Note:** This process downloads multiple categories, but we filter only four relevant ones.
+3. Data Preprocessing
+The dataset undergoes preprocessing, which includes:
+- Removing special characters and stopwords
+- Tokenization
+- Lemmatization
+NLTK's `stopwords` and `WordNetLemmatizer` are used for these tasks.
+4. Model Training
+Two models are trained:
+1. **Naive Bayes (with TF-IDF):** A traditional ML model that works well for text classification.
+2. **BERT (Transformer-based Model):** A deep learning model for improved contextual understanding.
+The BERT model requires significant GPU resources and time for training.
+5. Model Evaluation
+Both models are evaluated using accuracy, precision, recall, and F1-score. 
+BERT achieves higher accuracy (~92%), while Naive Bayes is faster but less effective (~85%).
+6. Ignore Warnings
+While running the code, some warnings (such as TensorFlow/PyTorch deprecation warnings) may appear. These do not affect the execution of the code and can be safely ignored.
+7. Conclusion
+This project demonstrates two approaches for text classification. While Naive Bayes is efficient, BERT provides superior results at the cost of higher computation time. Future improvements include hyperparameter tuning and experimenting with alternative deep learning models.
