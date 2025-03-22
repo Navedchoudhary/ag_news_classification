@@ -15,7 +15,8 @@ from transformers import BertTokenizer, BertForSequenceClassification, Trainer, 
 # Load AG News dataset (similar dataset, as AG News isn't directly in sklearn)
 from sklearn.datasets import fetch_20newsgroups
 categories = ['rec.sport.baseball', 'sci.med', 'talk.politics.mideast', 'comp.graphics']
-data = fetch_20newsgroups(subset='all', categories=categories, remove=('headers', 'footers', 'quotes'), download_if_missing=False)
+data = fetch_20newsgroups(subset='all', categories=categories, remove=('headers', 'footers', 'quotes'))
+# data = fetch_20newsgroups(subset='all', categories=categories, remove=('headers', 'footers', 'quotes'), download_if_missing=False)
 
 df = pd.DataFrame({'text': data.data, 'category': data.target})
 
